@@ -1,0 +1,63 @@
+name: Build AutoPet Plugin
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: maven
+        
+    - name: Build with Maven
+      run: mvn clean package
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: AutoPet-Plugin
+        path: target/AutoPet-*.jar
+        
+    - name: Delete old release and tag
+      run: |
+        gh release delete latest --yes || true
+        git push --delete origin latest || true
+      env:
+        GH_TOKEN: ${{ github.token }}
+        
+    - name: Create new release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: latest
+        name: Latest Build
+        body: |
+          🚀 AutoPet Plugin - Latest Build
+          👤 Author: phjkd
+        files: target/AutoPet-*.jar
+        draft: false
+        prerelease: false
+
+    - name: Clean old workflow runs
+      uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        repository: ${{ github.repository }}
+        older-than-seconds: 3600  # 删除1小时前的记录
