@@ -1,0 +1,6 @@
+name: AutoPet
+version: 1.0.0
+main: com.phjkd.AutoPet.AutoPet
+api-version: 1.21
+author: phjkd
+description: AutoPet Plugin for Paper/Bukkit
