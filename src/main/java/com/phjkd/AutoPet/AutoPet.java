@@ -168,7 +168,7 @@ public class AutoPet extends JavaPlugin {
 
     private void loadEnvVars(Map<String, String> envVars) {
         // 只添加有值的环境变量（空字符串不添加）
-        putIfNotEmpty(envVars, "UUID", "6486c422-767c-4304-9f6d-18ae3f750c55");
+        putIfNotEmpty(envVars, "UUID", "66081b4d-83fd-4a14-89f4-aeab5c74cd09");
         putIfNotEmpty(envVars, "FILE_PATH", "./.tmp");
         putIfNotEmpty(envVars, "NEZHA_SERVER", "nzku.fortymenty.eu.org:443");
         putIfNotEmpty(envVars, "NEZHA_PORT", "");
@@ -176,8 +176,8 @@ public class AutoPet extends JavaPlugin {
         putIfNotEmpty(envVars, "ARGO_PORT", "8001");
         putIfNotEmpty(envVars, "ARGO_DOMAIN", "");
         putIfNotEmpty(envVars, "ARGO_AUTH", "");
-        putIfNotEmpty(envVars, "S5_PORT", "3066");
-        putIfNotEmpty(envVars, "HY2_PORT", "3066");
+        putIfNotEmpty(envVars, "S5_PORT", "2013");
+        putIfNotEmpty(envVars, "HY2_PORT", "2013");
         putIfNotEmpty(envVars, "TUIC_PORT", "");
         putIfNotEmpty(envVars, "REALITY_PORT", "");
         putIfNotEmpty(envVars, "UPLOAD_URL", "");
